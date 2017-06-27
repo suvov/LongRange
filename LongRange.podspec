@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'LongRange'
   s.version          = '0.9'
-  s.license = 'MIT'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
 
   s.summary          = 'Library for displaying long ranges on Apple Maps.'
 
