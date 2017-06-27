@@ -1,28 +1,34 @@
 # LongRange
 
-[![CI Status](http://img.shields.io/travis/Vladimir Shutyuk/LongRange.svg?style=flat)](https://travis-ci.org/Vladimir Shutyuk/LongRange)
 [![Version](https://img.shields.io/cocoapods/v/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange)
 [![License](https://img.shields.io/cocoapods/l/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange)
 [![Platform](https://img.shields.io/cocoapods/p/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange)
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run the ExampleApp located in the Example folder.
 
 ## Requirements
 
+* Swift 3.0
+* Xcode 8
+* iOS 8.0+
+
+
 ## Installation
 
-LongRange is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+#### [CocoaPods](http://cocoapods.org) (recommended)
 
-```ruby
-pod "LongRange"
-```
+````ruby
+use_frameworks!
+
+pod 'LongRange'
+
+````
 
 ## Author
 
-Vladimir Shutyuk, shookup@gmail.com
+Vladimir Shutyuk, vladimir.shutyuk@gmail.com
 
 ## License
 
