@@ -10,16 +10,44 @@
 public protocol RangeObjectProtocol {
     
     var rangeMeters: Double { get }
-    var color: COLOR { get }
+    var displayAttributes: RangeObjectDisplayAttributesProtocol? { get }
 }
 
-public struct RangeObject:RangeObjectProtocol {
+public extension RangeObjectProtocol {
+    
+    var displayAttributes: RangeObjectDisplayAttributesProtocol? {
+        return nil
+    }
+}
+
+public protocol RangeObjectDisplayAttributesProtocol {
+    
+    var lineColor: COLOR { get }
+    var lineWidth: CGFloat { get }
+}
+
+public struct RangeObject: RangeObjectProtocol {
     
     public let rangeMeters: Double
-    public let color: COLOR
     
-    public init(rangeMeters: Double, color: COLOR) {
+    public init(rangeMeters: Double) {
         self.rangeMeters = rangeMeters
-        self.color = color
     }
+    
+    private var rangeObjectDisplayAttributes: RangeObjectDisplayAttributes?
+    
+    public init(rangeMeters: Double, lineColor: COLOR, lineWidth: CGFloat) {
+        self.rangeMeters = rangeMeters
+        self.rangeObjectDisplayAttributes = RangeObjectDisplayAttributes(lineColor: lineColor, lineWidth: lineWidth)
+    }
+    
+    public var displayAttributes: RangeObjectDisplayAttributesProtocol?  {
+        return rangeObjectDisplayAttributes ?? nil
+    }
+}
+
+fileprivate struct RangeObjectDisplayAttributes: RangeObjectDisplayAttributesProtocol {
+
+    let lineColor: COLOR
+    let lineWidth: CGFloat
 }

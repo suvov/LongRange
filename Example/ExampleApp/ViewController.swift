@@ -45,8 +45,8 @@ class ViewController: UIViewController {
     }
     
     private func updateRangeOverlayProvider() {
-        let rangeObjects = [RangeObject(rangeMeters: 4000000, color: .red), RangeObject(rangeMeters: 3000000, color: .green), RangeObject(rangeMeters: 5000000, color: .white)]
-        
+        let rangeObjects = [RangeObject(rangeMeters: 4000000, lineColor: .red, lineWidth:3), RangeObject(rangeMeters: 3000000, lineColor: .green, lineWidth:3), RangeObject(rangeMeters: 5000000, lineColor: .white, lineWidth:3)]
+
         let rangeCoordinatesCalculator = RangeCoordinatesCalculator()
         
         let distanceCalculator = DistanceCalculator()

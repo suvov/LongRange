@@ -10,7 +10,7 @@ import Foundation
 import MapKit
 
 
-public  protocol RangeOverlayProviding {
+public protocol RangeOverlayProviding {
     
     var overlays: [MKOverlay] { get }
     func rendererForOverlay(_ overlay: MKOverlay) -> MKOverlayRenderer?
@@ -20,7 +20,9 @@ public struct RangeOverlayProvider: RangeOverlayProviding {
     
     var unreachableAreaColor: COLOR = .white
     var unreachableAreaAlpha: CGFloat = 0.8
-    var rangeLineWidth: CGFloat = 3.0
+    
+    private let rangeLineColor: COLOR = .white
+    private let rangeLineWidth: CGFloat = 3.0
 
     private let rangeObjects: [RangeObjectProtocol]
     private let rangeFromCoordinate: CLLocationCoordinate2D
@@ -61,18 +63,34 @@ public struct RangeOverlayProvider: RangeOverlayProviding {
     private func rendererForPolyline(_ polyline: MKPolyline) -> MKPolylineRenderer {
         let renderer = MKPolylineRenderer(polyline: polyline)
         renderer.strokeColor = colorForPolyline(polyline)
-        renderer.lineWidth = rangeLineWidth
+        renderer.lineWidth = lineWidthForPolyline(polyline)
         return renderer
+        
     }
     
     private func colorForPolyline(_ polyline: MKPolyline) -> COLOR {
-        if let title = polyline.title, let index = Int(title) {
-            if rangeObjects.indices.contains(index) {
-                let rangeObject = rangeObjects[index]
-                return rangeObject.color
+        if let displayAttributes = displayAttributesForPolyline(polyline) {
+            return displayAttributes.lineColor
+        }
+        return rangeLineColor
+    }
+    
+    private func lineWidthForPolyline(_ polyline: MKPolyline) -> CGFloat {
+        if let displayAttributes = displayAttributesForPolyline(polyline) {
+            return displayAttributes.lineWidth
+        }
+        return rangeLineWidth
+    }
+    
+    private func displayAttributesForPolyline(_ polyline: MKPolyline) -> RangeObjectDisplayAttributesProtocol? {
+        guard let title = polyline.title, let index = Int(title) else { return nil }
+        if rangeObjects.indices.contains(index) {
+            let rangeObject = rangeObjects[index]
+            if let displayAttributes = rangeObject.displayAttributes {
+                return displayAttributes
             }
         }
-        return .white
+        return nil
     }
     
     private func rendererForPolygon(_ polygon: MKPolygon) -> MKPolygonRenderer {
