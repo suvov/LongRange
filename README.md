@@ -1,6 +1,6 @@
 # LongRange
 
-[![Build Status](https://travis-ci.org/suvov/LongRange.svg?branch=master)](https://travis-ci.org/suvov/LongRange) [![codecov.io](https://codecov.io/gh/suvov/LongRange/branch/master/graphs/badge.svg)](https://codecov.io/gh/codecov/LongRange/branch/master) [![Version](https://img.shields.io/cocoapods/v/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange) [![License](https://img.shields.io/cocoapods/l/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange) [![Platform](https://img.shields.io/cocoapods/p/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange)
+[![Build Status](https://travis-ci.org/suvov/LongRange.svg?branch=master)](https://travis-ci.org/suvov/LongRange) [![codecov](https://codecov.io/gh/suvov/LongRange/branch/master/graph/badge.svg)](https://codecov.io/gh/suvov/LongRange) [![Version](https://img.shields.io/cocoapods/v/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange) [![License](https://img.shields.io/cocoapods/l/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange) [![Platform](https://img.shields.io/cocoapods/p/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange)
 
 ![Icon][img0]
 
