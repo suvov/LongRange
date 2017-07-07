@@ -1,5 +1,7 @@
 # LongRange
 
+[![Build Status](https://travis-ci.org/suvov/LongRange.svg?branch=master)](https://travis-ci.org/suvov/VSStoreKit) [![codecov.io](https://codecov.io/gh/suvov/LongRange/branch/master/graphs/badge.svg)](https://codecov.io/gh/codecov/VSStoreKit/branch/master)
+
 ![Icon][img0]
 
 Long Range is an iOS library for displaying and comparing ranges in Apple Maps. We can't use circles when displaying longer range on the map. Earth isn't flat so we need to calculate reachable locations from given coordinate and draw appropriate polygon. It is what Long Range does.

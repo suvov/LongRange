@@ -1,0 +1,14 @@
+osx_image: xcode8.0
+language: objective-c
+
+xcode_project: LongRange.xcodeproj
+
+# whitelist
+branches:
+only:
+- master
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
+
+
