@@ -1,15 +1,13 @@
 # LongRange
 
-[![Build Status](https://travis-ci.org/suvov/LongRange.svg?branch=master)](https://travis-ci.org/suvov/VSStoreKit) [![codecov.io](https://codecov.io/gh/suvov/LongRange/branch/master/graphs/badge.svg)](https://codecov.io/gh/codecov/VSStoreKit/branch/master)
+[![Build Status](https://travis-ci.org/suvov/LongRange.svg?branch=master)](https://travis-ci.org/suvov/LongRange) [![codecov.io](https://codecov.io/gh/suvov/LongRange/branch/master/graphs/badge.svg)](https://codecov.io/gh/codecov/LongRange/branch/master) [![Version](https://img.shields.io/cocoapods/v/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange) [![License](https://img.shields.io/cocoapods/l/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange) [![Platform](https://img.shields.io/cocoapods/p/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange)
 
 ![Icon][img0]
 
-Long Range is an iOS library for displaying and comparing ranges in Apple Maps. We can't use circles when displaying longer range on the map. Earth isn't flat so we need to calculate reachable locations from given coordinate and draw appropriate polygon. It is what Long Range does.
+LongRange is an iOS library for displaying and comparing ranges in Apple Maps. We can't use circles when displaying longer range on the map. Earth isn't flat so we need to calculate reachable locations from given coordinate and draw appropriate polygon. It is what Long Range does.
 Check out the Example project, it is actually quite fun!
 
-[![Version](https://img.shields.io/cocoapods/v/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange)
-[![License](https://img.shields.io/cocoapods/l/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange)
-[![Platform](https://img.shields.io/cocoapods/p/LongRange.svg?style=flat)](http://cocoapods.org/pods/LongRange)
+
 
 ## Screenshots 
 
