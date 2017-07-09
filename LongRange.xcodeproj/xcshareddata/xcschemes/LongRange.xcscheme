@@ -29,7 +29,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E770A43F1F02B9A400F5A941"
+               BuildableName = "LongRangeTests.xctest"
+               BlueprintName = "LongRangeTests"
+               ReferencedContainer = "container:LongRange.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E76FF8BF1F02B8370018A144"
+            BuildableName = "LongRange.framework"
+            BlueprintName = "LongRange"
+            ReferencedContainer = "container:LongRange.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
